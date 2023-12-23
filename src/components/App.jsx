@@ -38,7 +38,7 @@ const App = () => {
         <Typography variant="h4" align="center" gutterBottom>
           Kanban Board
         </Typography>
-        <FormControl variant="outlined" fullWidth style={{ marginBottom: 16 }}>
+        <FormControl variant="outlined"  style={{ marginBottom: 16 }}>
           <InputLabel id="grouping-label">Group by:</InputLabel>
           <Select
             labelId="grouping-label"
@@ -52,7 +52,7 @@ const App = () => {
             <MenuItem value="priority">Priority</MenuItem>
           </Select>
         </FormControl>
-        <FormControl variant="outlined" fullWidth>
+        <FormControl variant="outlined" >
           <InputLabel id="sorting-label">Sort by:</InputLabel>
           <Select
             labelId="sorting-label"

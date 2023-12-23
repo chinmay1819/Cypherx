@@ -4,6 +4,8 @@ import Ticket from './Ticket';
 import _ from 'lodash';
 import Grid from '@mui/material/Grid';
 
+
+
 const Board = ({ tickets, groupingOption, sortingOption }) => {
 
   const [groupedTickets, setGroupedTickets] = useState({});
@@ -25,8 +27,9 @@ const Board = ({ tickets, groupingOption, sortingOption }) => {
 
     return Object.keys(sortedTickets).map((group, index) => (
       <Grid key={index} item xs={1} sm={5} md={4} lg={3}>
-        <div className="ticket-group">
+        <div style={{display:"flex",gap:"10px",flexDirection:"column"}}>
           <h2>{group}</h2>
+          <hr style={{border:"1px solid #afafaf",width:"100%"}}/>
           {sortedTickets[group].map((ticket) => (
             <Ticket key={ticket.id} ticket={ticket} />
           ))}
